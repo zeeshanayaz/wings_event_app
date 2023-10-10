@@ -1,6 +1,15 @@
 # Wings
 Discover, book, and soar with Wings - the event showcase!
 
+## 🚀 Platform Versions
+**Wings** is powered by the magic of Flutter and Dart. To embark on this exciting journey, make sure you're equipped with the right versions:
+- **Flutter**: v3.10.5 or higher 🦋
+- **Dart**: 3.0.5 or higher 🎯
+
+Don't worry, if you're not up to speed yet, it's easy to upgrade! Just visit the [Flutter](https://flutter.dev/docs/get-started/install) and [Dart](https://dart.dev/get-dart) websites to get the latest versions.
+
+Let's flutter and dart our way to greatness together! 🌟
+
 ## Contribution
 🚀 We believe in the power of collaboration and welcome contributions from our amazing community to make **Wings** even more awesome!
 
