@@ -1,4 +1,4 @@
-# wings_event_app
+# Wings
 Discover, book, and soar with Wings - the event showcase!
 
 ## Contribution
