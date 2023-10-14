@@ -70,6 +70,25 @@ class ThemeConfig {
         color: textColorLight,
       ),
 
+      bodyLarge: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorLight,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorLight,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorLight,
+      ),
+
     ),
   );
 
@@ -128,6 +147,24 @@ class ThemeConfig {
         color: textColorDark,
       ),
 
+      bodyLarge: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorDark,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorDark,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins',
+        color: textColorDark,
+      ),
     ),
   );
 }

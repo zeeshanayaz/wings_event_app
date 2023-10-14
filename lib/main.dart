@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'localization/strings.dart';
+import 'presentation/auth/on_board/onboarding_screen.dart';
 import 'utils/theme/theme_config.dart';
 
 void main() {
@@ -18,13 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeConfig.lightTheme,
       darkTheme: ThemeConfig.darkTheme,
       themeMode: ThemeMode.system,
+      translations: Strings(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
-      home: Scaffold(
-        body: Center(
-          child: Image.asset('assets/images/logo.png'),
-        ),
-      ),
+      home: const OnBoardingScreen(),
     );
   }
 }
