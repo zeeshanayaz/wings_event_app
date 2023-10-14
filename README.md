@@ -1,5 +1,24 @@
+<p align="center">
+
+  <a href="https://github.com/zeeshanayaz/wings_event_app">
+    <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20Android%20%7C%20Linux%20%7C%20Windows%20%7C%20Web-green.svg" alt="Supported platforms" />
+  </a>
+  <br>
+<!--   <a href="https://github.com/zeeshanayaz/wings_event_app">
+    <img src="https://img.shields.io/pub/v/wings_event_app.svg" alt="Pub package version." />
+  </a> -->
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102" alt="Open Source Love." />
+  </a>
+  <a href="https://github.com/zeeshanayaz/wings_event_app/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Popover is released under the MIT license." />
+  </a>
+</p>
+
 # Wings
-Discover, book, and soar with Wings - the event showcase!
+Wings is your passport to unforgettable experiences. Elevate your event journey with our all-in-one showcase and booking app. Explore a world of diverse events, from concerts to conferences, and unlock seamless ticketing and scheduling. With Wings, you're not just an attendee; you're a VIP guest to a world of possibilities. So spread your Wings and let every moment take flight.
+
+Discover, book, and soar with Wings today! 🌟
 
 ## 🚀 Platform Versions
 **Wings** is powered by the magic of Flutter and Dart. To embark on this exciting journey, make sure you're equipped with the right versions:
@@ -30,4 +49,4 @@ Please don't forget to **like**, **follow**, and **star our repo**!.
 If you encounter any problems feel free to open an [issue](https://github.com/zeeshanayaz/wings_event_app/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/zeeshanayaz/wings_event_app/issues/new?template=feature_request.md). Pull request are also welcome.
 
 ## License
-This package is available under the **MIT License**.
+This package is available under the [**MIT License**](LICENSE).
