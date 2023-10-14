@@ -15,6 +15,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="assets/images/logo.png" alt="Wings Logo" width="150" height="150">
+</p>
+
 # Wings
 Wings is your passport to unforgettable experiences. Elevate your event journey with our all-in-one showcase and booking app. Explore a world of diverse events, from concerts to conferences, and unlock seamless ticketing and scheduling. With Wings, you're not just an attendee; you're a VIP guest to a world of possibilities. So spread your Wings and let every moment take flight.
 
