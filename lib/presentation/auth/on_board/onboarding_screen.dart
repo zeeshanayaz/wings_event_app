@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:wings_event_app/utils/extensions.dart';
+import 'dart:math' as math;
 
+import '../../../utils/extensions.dart';
 import '../../../models/on_board/on_boarding_content.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -48,33 +49,50 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 onPageChanged: (value) => setState(() => _currentPage = value),
                 itemCount: onBoardContent.length,
                 itemBuilder: (context, i) {
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        onBoardContent[i].image,
-                        fit: BoxFit.fitWidth,
-                      ),
-                      20.height,
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                        child: Text(
-                          onBoardContent[i].title,
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.headlineLarge,
-                        ),
-                      ),
-                      20.height,
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                        child: Text(
-                          onBoardContent[i].desc,
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                      ),
-                    ],
-                  );
+                  return AnimatedBuilder(
+                      animation: _controller,
+                      builder: (context, child) {
+                        double pageOffSet = 0;
+                        if(_controller.position.haveDimensions) {
+                          pageOffSet = _controller.page! - i;
+                        }
+                        double gauss = math.exp(-(math.pow(pageOffSet.abs() - 0.5, 2) / 0.08));
+                        return Transform.translate(
+                          offset: Offset(-32 * gauss * pageOffSet.sign, 0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                onBoardContent[i].image,
+                                fit: BoxFit.fitWidth,
+                                width: double.infinity,
+                                alignment: Alignment(pageOffSet, 0),
+                              ),
+                              20.height,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24.0),
+                                child: Text(
+                                  onBoardContent[i].title,
+                                  textAlign: TextAlign.center,
+                                  style:
+                                      Theme.of(context).textTheme.headlineLarge,
+                                ),
+                              ),
+                              20.height,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24.0),
+                                child: Text(
+                                  onBoardContent[i].desc,
+                                  textAlign: TextAlign.center,
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      });
                 }),
           ),
           Expanded(
