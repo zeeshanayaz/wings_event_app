@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'dart:math' as math;
 
+import '../../../common_widgets/common_button.dart';
 import '../../../utils/extensions.dart';
 import '../../../models/on_board/on_boarding_content.dart';
 
@@ -39,6 +40,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           kToolbarHeight.height,
           Expanded(
@@ -53,10 +55,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       animation: _controller,
                       builder: (context, child) {
                         double pageOffSet = 0;
-                        if(_controller.position.haveDimensions) {
+                        if (_controller.position.haveDimensions) {
                           pageOffSet = _controller.page! - i;
                         }
-                        double gauss = math.exp(-(math.pow(pageOffSet.abs() - 0.5, 2) / 0.08));
+                        double gauss = math
+                            .exp(-(math.pow(pageOffSet.abs() - 0.5, 2) / 0.08));
                         return Transform.translate(
                           offset: Offset(-32 * gauss * pageOffSet.sign, 0),
                           child: Column(
@@ -70,8 +73,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               ),
                               20.height,
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 24.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24.0),
                                 child: Text(
                                   onBoardContent[i].title,
                                   textAlign: TextAlign.center,
@@ -81,11 +84,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               ),
                               20.height,
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 24.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24.0),
                                 child: Text(
                                   onBoardContent[i].desc,
                                   textAlign: TextAlign.center,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
                                   style: Theme.of(context).textTheme.bodySmall,
                                 ),
                               ),
@@ -98,7 +103,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           Expanded(
             flex: 1,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -114,16 +119,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         padding: const EdgeInsets.all(30),
                         child: SizedBox(
                           width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              /*Navigator.of(context)
-                              .pushReplacement(MaterialPageRoute(
-                            builder: (_) => const LoginScreen(),
-                          ));*/
-                            },
-                            child: Text(
-                              'get_started'.tr,
-                            ),
+                          child: CommonButton(
+                            title: 'get_started'.tr,
+                            onPressed: () {},
                           ),
                         ))
                     : Padding(
@@ -145,16 +143,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     Theme.of(context).textTheme.displayMedium,
                               ),
                             ),
-                            ElevatedButton(
+                            CommonButton(
+                              title: 'next'.tr,
                               onPressed: () {
                                 _controller.nextPage(
-                                  duration: const Duration(milliseconds: 200),
+                                  duration: const Duration(milliseconds: 400),
                                   curve: Curves.easeIn,
                                 );
                               },
-                              child: Text(
-                                'next'.tr,
-                              ),
                             ),
                           ],
                         ),
@@ -176,12 +172,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         borderRadius: const BorderRadius.all(
           Radius.circular(50),
         ),
-        color: Theme.of(context).splashColor,
+        color: _currentPage == index
+            ? Theme.of(context).splashColor
+            : Theme.of(context).dividerColor,
       ),
       margin: const EdgeInsets.only(right: 5),
-      height: 10,
+      height: 5,
       curve: Curves.easeIn,
-      width: _currentPage == index ? 20 : 10,
+      width: _currentPage == index ? 30 : 5,
     );
   }
 }

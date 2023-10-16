@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class ThemeConfig {
   static const Color scaffoldBackgroundLight = Color(0xFFF4F4F4);
   static const Color scaffoldBackgroundDark = Color(0xFF222222);
-  // static const Color splashColor = Color(0xFF059DC0);
-  // static const Color seedColor = Color(0xFF059DC0);
+  static const Color splashColor = Color(0xFF808080);
+  static const Color seedColor = Color(0xFF808080);
+  static const Color dividerColor = Color(0x338B8688);
 
   static const Color cardColorLight = Colors.white;
   static const Color cardColorDark = Colors.black;
@@ -22,11 +23,12 @@ class ThemeConfig {
       backgroundColor: scaffoldBackgroundLight,
       elevation: 0,
     ),
-    // splashColor: splashColor,
+    splashColor: splashColor,
+    dividerColor: dividerColor,
     iconTheme: const IconThemeData(
       color: Colors.black,
     ),
-    // colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
+    colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
     cardTheme: const CardTheme(
       color: cardColorLight,
       clipBehavior: Clip.hardEdge,
@@ -99,11 +101,12 @@ class ThemeConfig {
       backgroundColor: scaffoldBackgroundDark,
       elevation: 0,
     ),
-    // splashColor: splashColor,
+    splashColor: splashColor,
+    dividerColor: dividerColor,
     iconTheme: const IconThemeData(
       color: Colors.white,
     ),
-    // colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
+    colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
     cardTheme: const CardTheme(
       color: cardColorDark,
       clipBehavior: Clip.hardEdge,
