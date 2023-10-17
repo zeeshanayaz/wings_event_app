@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
-  const CommonButton({super.key, this.title, this.onPressed});
+  const CommonButton(this.title, {super.key, this.onPressed});
 
   final String? title;
   final VoidCallback? onPressed;

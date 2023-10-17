@@ -6,6 +6,7 @@ import 'dart:math' as math;
 import '../../../common_widgets/common_button.dart';
 import '../../../utils/extensions.dart';
 import '../../../models/on_board/on_boarding_content.dart';
+import '../login/login_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -120,8 +121,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         child: SizedBox(
                           width: double.infinity,
                           child: CommonButton(
-                            title: 'get_started'.tr,
-                            onPressed: () {},
+                            'get_started'.tr,
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginScreen()),
+                              );
+                            },
                           ),
                         ))
                     : Padding(
@@ -144,7 +151,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               ),
                             ),
                             CommonButton(
-                              title: 'next'.tr,
+                              'next'.tr,
                               onPressed: () {
                                 _controller.nextPage(
                                   duration: const Duration(milliseconds: 400),
