@@ -95,7 +95,7 @@ class ThemeConfig {
       ),
       inputDecorationTheme: InputDecorationTheme(
         fillColor: scaffoldBackgroundLight,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding: const EdgeInsets.all(20.0),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: const BorderSide(color: splashColor)),
@@ -103,6 +103,10 @@ class ThemeConfig {
             borderRadius: BorderRadius.circular(10.0),
             borderSide: const BorderSide(color: splashColor)),
         enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(color: dividerColor),
+        ),
+        disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(color: dividerColor),
         ),
@@ -194,7 +198,7 @@ class ThemeConfig {
     ),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: scaffoldBackgroundDark,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      contentPadding: const EdgeInsets.all(20.0),
       border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(color: splashColor)),
@@ -202,6 +206,10 @@ class ThemeConfig {
           borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(color: splashColor)),
       enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        borderSide: const BorderSide(color: dividerColor),
+      ),
+      disabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
         borderSide: const BorderSide(color: dividerColor),
       ),

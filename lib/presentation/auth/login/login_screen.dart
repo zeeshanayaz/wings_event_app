@@ -73,6 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CommonTextFormField(
                 hintText: 'enter_username'.tr,
                 // controller: TextEditingController(),
+                textInputAction: TextInputAction.next,
                 prefixIcon: SvgPicture.asset(
                   'assets/svgs/icon_username.svg',
                   fit: BoxFit.none,

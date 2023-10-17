@@ -46,6 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               CommonTextFormField(
                 hintText: 'username'.tr,
                 // controller: TextEditingController(),
+                textInputAction: TextInputAction.next,
                 prefixIcon: SvgPicture.asset(
                   'assets/svgs/icon_username.svg',
                   fit: BoxFit.none,
@@ -56,6 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 hintText: 'dummy_email'.tr,
                 // controller: TextEditingController(),
                 keyboardType: TextInputType.emailAddress,
+                textInputAction: TextInputAction.next,
                 prefixIcon: SvgPicture.asset(
                   'assets/svgs/icon_username.svg',
                   fit: BoxFit.none,
@@ -63,7 +65,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               16.height,
               Obx(
-                    () => CommonTextFormField(
+                () => CommonTextFormField(
                   hintText: 'enter_password'.tr,
                   // controller: TextEditingController(),
                   obscureText: registerController.obscureText.value,
@@ -91,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               16.height,
               Obx(
-                    () => CommonTextFormField(
+                () => CommonTextFormField(
                   hintText: 'confirm_password'.tr,
                   // controller: TextEditingController(),
                   obscureText: registerController.obscureText.value,
@@ -171,9 +173,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Text(
                       'login'.tr,
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        fontWeight: FontWeight.w500,
-                        decoration: TextDecoration.underline,
-                      ),
+                            fontWeight: FontWeight.w500,
+                            decoration: TextDecoration.underline,
+                          ),
                     ),
                   ),
                 ],
