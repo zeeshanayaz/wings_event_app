@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
                 prefixIcon: SvgPicture.asset(
-                  'assets/svgs/icon_username.svg',
+                  'assets/svgs/icon_email.svg',
                   fit: BoxFit.none,
                 ),
               ),

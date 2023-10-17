@@ -71,11 +71,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               12.height,
               CommonTextFormField(
-                hintText: 'enter_username'.tr,
+                hintText: 'dummy_email'.tr,
                 // controller: TextEditingController(),
+                keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
                 prefixIcon: SvgPicture.asset(
-                  'assets/svgs/icon_username.svg',
+                  'assets/svgs/icon_email.svg',
                   fit: BoxFit.none,
                 ),
               ),
