@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               kToolbarHeight.height,
               Padding(
-                padding: const EdgeInsets.all(48.0),
+                padding: const EdgeInsets.all(36.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -127,9 +127,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     horizontal: 36.0, vertical: 12.0),
                 child: SizedBox(
                     width: double.infinity,
-                    child: CommonButton(
-                      'login'.tr,
-                      onPressed: () {},
+                    child: Hero(
+                      tag: 'button',
+                      child: CommonButton(
+                        'login'.tr,
+                        onPressed: () {},
+                      ),
                     )),
               ),
               Row(
@@ -176,16 +179,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) => const RegisterScreen()),
                       );
                     },
-                    child: Text(
-                      'signup'.tr,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            fontWeight: FontWeight.w500,
-                            decoration: TextDecoration.underline,
-                          ),
+                    child: Hero(
+                      tag: 'signup',
+                      child: Text(
+                        'signup'.tr,
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              fontWeight: FontWeight.w500,
+                              decoration: TextDecoration.underline,
+                            ),
+                      ),
                     ),
                   ),
                 ],
               ),
+              16.height,
             ],
           ),
         ),

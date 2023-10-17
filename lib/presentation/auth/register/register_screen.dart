@@ -37,9 +37,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
             children: [
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'sign_up'.tr,
-                  style: Theme.of(context).textTheme.headlineLarge,
+                child: Hero(
+                  tag: 'signup',
+                  child: Text(
+                    'sign_up'.tr,
+                    style: Theme.of(context).textTheme.headlineLarge,
+                  ),
                 ),
               ),
               20.height,
@@ -179,7 +182,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                 ],
-              )
+              ),
+              16.height,
             ],
           ),
         ),

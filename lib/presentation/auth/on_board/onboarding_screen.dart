@@ -66,11 +66,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Image.asset(
-                                onBoardContent[i].image,
-                                fit: BoxFit.fitWidth,
-                                width: double.infinity,
-                                alignment: Alignment(pageOffSet, 0),
+                              Flexible(
+                                child: Image.asset(
+                                  onBoardContent[i].image,
+                                  fit: BoxFit.fitWidth,
+                                  width: double.infinity,
+                                  alignment: Alignment(pageOffSet, 0),
+                                ),
                               ),
                               20.height,
                               Padding(
@@ -120,15 +122,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         padding: const EdgeInsets.all(30),
                         child: SizedBox(
                           width: double.infinity,
-                          child: CommonButton(
-                            'get_started'.tr,
-                            onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const LoginScreen()),
-                              );
-                            },
+                          child: Hero(
+                            tag: 'button',
+                            child: CommonButton(
+                              'get_started'.tr,
+                              onPressed: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const LoginScreen()),
+                                );
+                              },
+                            ),
                           ),
                         ))
                     : Padding(
