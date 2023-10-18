@@ -6,6 +6,7 @@ import '../../../common_widgets/common_button.dart';
 import '../../../common_widgets/common_text_form_field.dart';
 import '../../../common_widgets/social_button.dart';
 import '../../../utils/extensions.dart';
+import '../verification/verification_screen.dart';
 import 'controller/register_controller.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -130,7 +131,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     width: double.infinity,
                     child: CommonButton(
                       'sign_up'.tr,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const VerificationScreen()),
+                        );
+                      },
                     )),
               ),
               Row(

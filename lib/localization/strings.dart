@@ -27,6 +27,10 @@ class Strings extends Translations {
           'back': 'Back',
           'username': 'Username',
           'dummy_email': 'abc@email.com',
+          'verification': 'Verification',
+          'we_have_send_you_the_verification_code_on': 'We’ve send you the verification code on',
+          'continue': 'Continue',
+          're_send_code': 'Re-send code',
         },
       };
 }
