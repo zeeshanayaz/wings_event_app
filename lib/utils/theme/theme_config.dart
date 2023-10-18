@@ -121,7 +121,7 @@ class ThemeConfig {
           fontSize: 14,
           fontWeight: FontWeight.w400,
           fontFamily: 'Poppins',
-          color: textColorLight,
+          color: labelColorLight,
         ),
       ),
   );
@@ -228,7 +228,7 @@ class ThemeConfig {
         fontSize: 14,
         fontWeight: FontWeight.w400,
         fontFamily: 'Poppins',
-        color: textColorDark,
+        color: labelColorDark,
       ),
     ),
   );

@@ -7,6 +7,7 @@ import '../../../common_widgets/common_text_form_field.dart';
 import '../../../common_widgets/social_button.dart';
 import '../../../utils/extensions.dart';
 import '../../../utils/theme/theme_controller.dart';
+import '../forgot_password/forgot_password_screen.dart';
 import '../register/register_screen.dart';
 import 'controller/login_controller.dart';
 
@@ -114,10 +115,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: InkWell(
                   radius: 20.0,
                   borderRadius: BorderRadius.circular(10.0),
-                  onTap: () {},
-                  child: Text(
-                    'forgot_password'.tr,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ForgotPasswordScreen()),
+                    );
+                  },
+                  child: Hero(
+                    tag: 'forgot_password',
+                    child: Text(
+                      'forgot_password_'.tr,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
                   ),
                 ),
               ),

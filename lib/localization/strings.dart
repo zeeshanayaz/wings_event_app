@@ -15,7 +15,8 @@ class Strings extends Translations {
           'confirm_password': 'Confirm Password',
           'hide_password': 'Hide Password',
           'show_password': 'Show Password',
-          'forgot_password': 'Forgot Password?',
+          'forgot_password_': 'Forgot Password?',
+          'forgot_password': 'Forgot Password',
           'login': 'Login',
           'or': 'Or',
           'don_t_have_an_account': 'Don’t have an account? ',
@@ -31,6 +32,8 @@ class Strings extends Translations {
           'we_have_send_you_the_verification_code_on': 'We’ve send you the verification code on',
           'continue': 'Continue',
           're_send_code': 'Re-send code',
+          'please_enter_your_email_address_to_request_a_password_reset': 'Please enter your email address to request a password reset',
+          'send': 'Send',
         },
       };
 }
