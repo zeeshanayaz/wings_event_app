@@ -6,7 +6,10 @@ class ThemeConfig {
   static const Color splashColor = Color(0xFF808080);
   static const Color seedColor = Color(0xFF808080);
   static const Color dividerColor = Color(0x338B8688);
-  static const Color iconColor = Color(0x8025131A);
+  static const Color iconColor = Color(0x80807A7A);
+
+  static const Color appBarIconColorLight = Color(0xFF14131C);
+  static const Color appBarIconColorDark = Color(0xFFF1F1F1);
 
   static const Color cardColorLight = Colors.white;
   static const Color cardColorDark = Colors.black;
@@ -22,6 +25,10 @@ class ThemeConfig {
       appBarTheme: const AppBarTheme(
         backgroundColor: scaffoldBackgroundLight,
         elevation: 0,
+        iconTheme: IconThemeData(
+          color: appBarIconColorLight,
+          size: 22.0,
+        ),
       ),
       splashColor: splashColor,
       dividerTheme: const DividerThemeData(
@@ -125,6 +132,10 @@ class ThemeConfig {
     appBarTheme: const AppBarTheme(
       backgroundColor: scaffoldBackgroundDark,
       elevation: 0,
+      iconTheme: IconThemeData(
+        color: appBarIconColorDark,
+        size: 22.0,
+      ),
     ),
     splashColor: splashColor,
     dividerTheme: const DividerThemeData(
