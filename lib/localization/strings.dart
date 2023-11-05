@@ -34,6 +34,10 @@ class Strings extends Translations {
           're_send_code': 'Re-send code',
           'please_enter_your_email_address_to_request_a_password_reset': 'Please enter your email address to request a password reset',
           'send': 'Send',
+          'explore': 'Explore',
+          'events': 'Events',
+          'map': 'Map',
+          'profile': 'Profile',
         },
       };
 }

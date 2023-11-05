@@ -7,6 +7,7 @@ import '../../../common_widgets/common_text_form_field.dart';
 import '../../../common_widgets/social_button.dart';
 import '../../../utils/extensions.dart';
 import '../../../utils/theme/theme_controller.dart';
+import '../../dashboard/dashboard_screen.dart';
 import '../forgot_password/forgot_password_screen.dart';
 import '../register/register_screen.dart';
 import 'controller/login_controller.dart';
@@ -141,7 +142,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       tag: 'button',
                       child: CommonButton(
                         'login'.tr,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const DashboardScreen()),
+                              (Route route) => false);
+                        },
                       ),
                     )),
               ),
